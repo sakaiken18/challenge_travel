@@ -11,18 +11,18 @@ while true
   print "プランの番号を選択 > "
   plan_num = gets.to_i
   break if (1..3).include?(plan_num)
+
   puts "1から３の番号を入力してください。"
 end
 
-if plan_num == 1
+case plan_num 
+when 1
   place = "沖縄"
   price = 10000
-
-elsif plan_num == 2
+when 2
   place = "北海道"
   price = 20000
-
-elsif plan_num == 3
+when 3
   place = "九州"
   price = 15000
 end
@@ -32,10 +32,12 @@ puts "#{place}旅行ですね。"
 puts "何名で予約されますか？"
 
 while true
+
   print "人数を入力 > "
   number_of_human = gets.to_i
 
   break if number_of_human >= 1
+
   puts "1以上を入力してください。"
 
 end
